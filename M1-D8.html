@@ -50,6 +50,8 @@
         questions!
       </h2>
     </div>
+    <footer>This is the footer text</footer>
+
     <script>
       /* EXERCISE 1
        Write a function for changing the title of the document in something else.
@@ -146,26 +148,54 @@
       /* EXERCISE 8
        Write a function for making the background of every unordered list green.
       */
+     let paintItGreen = () => {
+      let ul3 = document.querySelectorAll("ul");
+      ul3[0 && 1].style.backgroundColor = "green";
+     }
+     paintItGreen();
 
-      const paintItGreen = function () {
-        //
-      };
-
+     // or 
+/* 
+     let paintItGreen = () => {
+      let ul3 = document.querySelectorAll("ul");
+      for (let i = 0; i < ul3.length; i++) {
+        ul3[i].style.backgroundColor = "green"
+      }
+    };
+ */
       /* EXERCISE 9
        Make the heading of the page change color every time the user clicks on it.
       */
+      hhh1.addEventListener("click", makeItClickable(event)) {
+        alert("you clicked!")
+      }
 
-      const makeItClickable = function () {
-        //
-      };
+
+
+
+      let hhh1 = document.getElementsByTagName("h1")[0];
+
+      let makeItClickable = (event) => {
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        hhh1.style.backgroundColor = randomColor;
+        onclick=makeItClickable();
+      }
+
+      hhh1.onclick = makeItClickable; // When I click on the H1 it changes to a random color. 
+     
 
       /* EXERCISE 10
        Change the footer text with something else when the user clicks on it.
       */
+      let footer1 = document.getElementsByTagName("footer")[0]
+      let changeFooterText = () => {
+          footer1.innerText = "THIS IS THE NEW FOOTER"
+       }
 
-      const changeFooterText = function () {
-        //
-      };
+        footer1.onclick = changeFooterText;
+
+
+
 
       /* EXERCISE 11
        Attach an event listener to the input field in the page for console logging its value just after any keystroke.
