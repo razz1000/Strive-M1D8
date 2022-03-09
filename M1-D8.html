@@ -202,15 +202,31 @@
       */
 
       const inputField = document.getElementById("input-field");
+
+/*       let listener1 = document.addEventListener("keydown", event)
+ */
+       let listener2 = (e) => {
+         inputField.console.log("e")
+         }
+
+         inputField.keydown = listener2;
+
+
       // ...
 
       /* EXERCISE 12
        Create a welcome alert message when the page successfully loads.
       */
 
-      window.onload = function () {
-        //
-      };
+      
+      const alertOn = function () {
+            alert("HI, Welcome")
+        }
+
+        window.onload = function () {
+            alertHi()
+         }
+
 
       /* EXERCISE 13
        Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
