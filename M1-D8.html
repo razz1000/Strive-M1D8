@@ -100,35 +100,48 @@
       */
       
       let changeUrls = () => {
-        
-      }
-
-
+        let href1 = document.querySelector("a") 
+          href1.href = "www.google.com"
+        }
+        changeUrls(); // Change URL to www.google.com
 
 
       /* EXERCISE 5
        Write a function for adding a new list item in the second unordered list.
       */
 
-      const addToTheSecond = function (content) {
-        //
+        let addToTheSecond = () => {
+          let ul = document.querySelectorAll('ul li');  
+          let liNew = document.createElement("li")
+          liNew.innerText = "This is the new li"
+          for (let i = 0; i <= ul.length - 1; i++) {
+          ul[i].appendChild(liNew)
+        }
       };
+      addToTheSecond();
+
 
       /* EXERCISE 6
        Write a function for adding a second paragraph to the first div.
       */
+      let addParagraph = () => {
+        let paragraph1 = document.querySelectorAll("div")[0];
+        let newp1 = document.createElement("p");
+        newp1.innerText = "This is the new p in the first div";
+        paragraph1.appendChild(newp1);
+      }
+      addParagraph();
 
-      const addParagraph = function (content) {
-        //
-      };
 
       /* EXERCISE 7
        Write a function for making the first unordered list disappear.
       */
-
-      const firstUlDisappear = function () {
-        //
-      };
+      let firstUlDisappear = () => {
+        let ul2 = document.querySelectorAll("ul")[0];
+        ul2.style.visibility = "hidden"
+      }
+      firstUlDisappear();
+      
 
       /* EXERCISE 8
        Write a function for making the background of every unordered list green.
